@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "laravel-upgrade-checker"
+version = "0.1.0"
+description = "Offline audit of a Laravel project: support status, PHP compatibility, legacy code, risky packages and an upgrade path."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["laravel", "php", "upgrade", "modernization", "audit", "composer"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+laravel-upgrade-checker = "laravel_upgrade_checker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
